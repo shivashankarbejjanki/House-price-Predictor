@@ -77,32 +77,7 @@ pip package manager
    ```
    http://localhost:8501
    ```
-
-## Project Structure
-
-```
-house-price-prediction/
-├──  house_price_prediction.py    # Main ML training script
-├──  app.py                      # Streamlit web application
-├──  requirements.txt            # Python dependencies
-├──  netlify.toml               # Netlify deployment config
-├──  build_static.py            # Static build script
-├──  README.md                  # Project documentation
-├──  .gitignore                 # Git ignore rules
-├──  DEPLOYMENT_GUIDE.md        # Deployment instructions
-├──  Static Web Files/
-│   ├── index.html               # Main HTML page
-│   ├── style.css                # Styling
-│   └── script.js                # JavaScript logic
-├──  Generated Files/
-│   ├── house_price_model.pkl     # Trained ML model
-│   ├── feature_importance.csv    # Feature analysis
-│   ├── eda_analysis.png         # Data visualizations
-│   ├── correlation_heatmap.png  # Feature correlations
-│   └── model_performance.png    # Model accuracy plots
-└──  dist/                     # Built static files for deployment
-```
-
+   
 ## Machine Learning Pipeline
 
 ### 1. Data Generation
