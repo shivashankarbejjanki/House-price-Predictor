@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏠 House Price Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-home"></i> House Price Predictor</h1>
+            <p>Predict house prices using machine learning</p>
+        </header>
+
+        <div class="main-content">
+            <div class="input-section">
+                <h2><i class="fas fa-edit"></i> Enter House Details</h2>
+                
+                <form id="predictionForm" class="prediction-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="area"><i class="fas fa-ruler-combined"></i> Area (sq ft)</label>
+                            <input type="number" id="area" min="500" max="5000" value="2000" step="50" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bedrooms"><i class="fas fa-bed"></i> Bedrooms</label>
+                            <select id="bedrooms" required>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3" selected>3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bathrooms"><i class="fas fa-bath"></i> Bathrooms</label>
+                            <select id="bathrooms" required>
+                                <option value="1">1</option>
+                                <option value="2" selected>2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age"><i class="fas fa-calendar-alt"></i> Age (years)</label>
+                            <input type="range" id="age" min="0" max="50" value="10" oninput="updateAgeValue(this.value)">
+                            <span id="ageValue">10 years</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="garage"><i class="fas fa-car"></i> Garage Spaces</label>
+                            <select id="garage" required>
+                                <option value="0">0</option>
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location"><i class="fas fa-map-marker-alt"></i> Location</label>
+                            <select id="location" required>
+                                <option value="Downtown">Downtown</option>
+                                <option value="Suburb" selected>Suburb</option>
+                                <option value="Rural">Rural</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="condition"><i class="fas fa-star"></i> Condition</label>
+                            <select id="condition" required>
+                                <option value="Excellent">Excellent</option>
+                                <option value="Good" selected>Good</option>
+                                <option value="Fair">Fair</option>
+                                <option value="Poor">Poor</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="predict-btn">
+                        <i class="fas fa-magic"></i> Predict Price
+                    </button>
+                </form>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h2><i class="fas fa-chart-line"></i> Prediction Results</h2>
+                
+                <div class="price-display" id="priceDisplay">
+                    <div class="price-label">Predicted Price</div>
+                    <div class="price-value" id="predictedPrice">$0</div>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-label">Price per Sq Ft</div>
+                        <div class="metric-value" id="pricePerSqft">$0</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Price per Bedroom</div>
+                        <div class="metric-value" id="pricePerBedroom">$0</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Market Segment</div>
+                        <div class="metric-value" id="marketSegment">-</div>
+                    </div>
+                </div>
+
+                <div class="feature-impact" id="featureImpact">
+                    <h3>Feature Impact Analysis</h3>
+                    <div class="impact-bars" id="impactBars"></div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-card">
+                    <h3><i class="fas fa-info-circle"></i> Model Information</h3>
+                    <ul>
+                        <li><strong>Algorithm:</strong> Linear Regression</li>
+                        <li><strong>R² Score:</strong> 0.91 (91% accuracy)</li>
+                        <li><strong>Features:</strong> 7 input variables</li>
+                        <li><strong>Training Data:</strong> 1000 house records</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-lightbulb"></i> Investment Tips</h3>
+                    <ul>
+                        <li><strong>Location</strong> has the biggest impact on price</li>
+                        <li><strong>Area</strong> is the primary value driver</li>
+                        <li><strong>Condition</strong> affects marketability</li>
+                        <li><strong>Age</strong> matters less in good locations</li>
+                        <li><strong>Garage</strong> adds significant value</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>🏠 House Price Predictor | Built with Machine Learning & Web Technologies</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
