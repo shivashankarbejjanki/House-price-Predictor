@@ -14,7 +14,7 @@ This project demonstrates end-to-end machine learning workflow from data generat
 
 ## Live Demo
 
-🔗 **[Try the Live App](https://your-app-name.netlify.app)** *(Replace with your actual Netlify URL)*
+🔗 **[Try the Live App](https://house-price-predicter.netlify.app/)**
 
 ## Screenshots
 
