@@ -16,20 +16,6 @@ This project demonstrates end-to-end machine learning workflow from data generat
 
 🔗 **[Try the Live App](https://house-price-predicter.netlify.app/)**
 
-## Screenshots
-
-### Main Interface
-![Main Interface](screenshots/main-interface.png)
-*Interactive prediction form with real-time results*
-
-### Prediction Results
-![Prediction Results](screenshots/prediction-results.png)
-*Detailed price analysis with feature impact visualization*
-
-### Data Analysis
-![EDA Visualization](screenshots/eda-analysis.png)
-*Exploratory data analysis and model performance metrics*
-
 ## Tech Stack
 
 | Technology | Purpose |
