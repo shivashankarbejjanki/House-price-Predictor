@@ -254,8 +254,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 through email: shivashankarbejjanki1@example.com
 
 --------------------------------thanks for reading-----------------------------------
-
-⭐ **Star this repository if you found it helpful!**
-
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/house-price-prediction.svg?style=social&label=Star)](https://github.com/yourusername/house-price-prediction)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/house-price-prediction.svg?style=social&label=Fork)](https://github.com/yourusername/house-price-prediction/fork)
